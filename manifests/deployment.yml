@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: abhisekpipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: abhisekpipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: abhisekpipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: abhisekpipelinesjavascriptdocker 
+          image: ewfjidshvfuo.azurecr.io/abhisekpipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
